@@ -1,0 +1,39 @@
+int main(int argc, char * argv[])
+{
+    std::string bitstream   = "vadd.xclbin";
+    bool chain     = false;
+    int n          = 1 << 10;
+    int m          = 1 << 6;
+
+    if (argc == 1) {
+        std::cout << "This program shows the usage of FNodeTask executing a VectorAdd (vadd) kernel containing multiple Compute Units (CUs)." << std::endl;
+        std::cout << "\nUsage:\n"
+                << "\t" << argv[0] << " file.xclbin [kernel_name] [num_workers] [chain_tasks] [vec_elems] [vec_nums]\n"
+                << "\nExample:\n"
+                << "\t" << argv[0]
+                << " " << bitstream
+                << " " << (chain ? "1" : "0")
+                << " $((1 << 10))"
+                << " $((1 << 6))"
+                << "\n"
+                << std::endl;
+        return 0;
+    }
+
+    int argi = 1;
+    if (argc > argi) bitstream   = std::string(argv[argi++]);
+    if (argc > argi) chain       = atoi(argv[argi++]) > 0;
+    if (argc > argi) n           = atoi(argv[argi++]);
+    if (argc > argi) m           = atoi(argv[argi++]);
+
+    
+
+    size_t size_in_bytes = n * sizeof(int);
+    size_t size_in_kb = size_in_bytes / 1024;
+    std::cout << "Executing  with " << bitstream + "\n";
+    //std::cout << "Generating " << (m * nWorkers) << " tasks in total and using " << nWorkers << " workers!\n";
+    std::cout << "Task (" << size_in_kb << " KB, " << size_in_kb << " KB) -> (" << size_in_kb << " KB)" << "\n\n";
+    std::cout << "  chain = " << chain    << "\n"
+              << "      n = " << n        << "\n"
+              << "      m = " << m        << "\n"
+              << std::endl;

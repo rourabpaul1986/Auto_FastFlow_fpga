@@ -1,0 +1,348 @@
+Profile Summary
+Generated on: 2023-11-23 16:02:46
+Msec since Epoch: 1700751766202
+Profiled application: test3
+Target platform: Xilinx
+Tool version: 2023.1
+XRT build version: 2.15.225
+Build version branch: 2023.1
+Build version hash: adf27adb3cfadc6e4c41d6db814159f1329b24f3
+Build version date: 2023-05-03 10:13:19
+Target devices: xilinx_u50_gen3x16_xdma_base_5-0, xilinx_u50_gen3x16_xdma_base_5-1
+Flow mode: System Run
+
+OpenCL API Calls
+API Name,Number Of Calls,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+clCreateBuffer,52,6.17478,0.015449,0.118746,0.786765,
+clCreateCommandQueue,6,0.01749,0.001019,0.002915,0.008911,
+clCreateContext,2,41.2722,17.7549,20.6361,23.5173,
+clCreateKernel,20,1122.41,28.4853,56.1205,72.4237,
+clCreateProgramWithBinary,2,263.83,126.42,131.915,137.411,
+clEnqueueMigrateMemObjects,40,1.37671,0.003609,0.0344177,0.256982,
+clEnqueueTask,20,1.77274,0.028919,0.0886369,0.312365,
+clGetDeviceIDs,4,0.00949,0.000747,0.0023725,0.004864,
+clGetExtensionFunctionAddress,2,0.047931,0.007437,0.0239655,0.040494,
+clGetExtensionFunctionAddressForPlatform,2,0.019117,0.002966,0.0095585,0.016151,
+clGetPlatformInfo,8,0.018768,0.000896,0.002346,0.008027,
+clReleaseCommandQueue,4,0.012882,0.001158,0.0032205,0.006603,
+clReleaseContext,4,0.006586,0.001073,0.0016465,0.002427,
+clReleaseDevice,10,0.032126,0.000728,0.0032126,0.012198,
+clReleaseEvent,80,1.43233,0.000726,0.0179041,0.42541,
+clReleaseKernel,20,0.056418,0.001139,0.0028209,0.008909,
+clReleaseMemObject,104,1.27971,0.00083,0.0123049,0.544978,
+clReleaseProgram,4,8.3435,0.001171,2.08588,4.55816,
+clRetainContext,2,0.002097,0.000989,0.0010485,0.001108,
+clRetainDevice,10,0.021871,0.000513,0.0021871,0.006831,
+clRetainEvent,20,0.073678,0.001439,0.0036839,0.014608,
+clRetainMemObject,52,0.310974,0.00092,0.00598027,0.07856,
+clRetainProgram,2,0.002909,0.001205,0.0014545,0.001704,
+clSetKernelArg,72,0.89328,0.001011,0.0124067,0.592753,
+clWaitForEvents,20,44.6031,0.002628,2.23016,26.5468,
+
+Kernel Execution
+Kernel,Number Of Enqueues,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),
+vadd,8,0.523621,0.043783,0.0654526,0.185915,
+vinc,8,0.614083,0.055805,0.0767604,0.115538,
+vmul,4,0.355328,0.059879,0.088832,0.163508,
+
+Top Kernel Execution
+Kernel Instance Address,Kernel,Context ID,Command Queue ID,Device,Start Time (ms),Duration (ms),Global Work Size,Local Work Size,
+140067272136544,vadd,0,2,xilinx_u50_gen3x16_xdma_base_5-0,719.678,0.185915,1:1:1,1:1:1,
+140067205027600,vmul,0,4,xilinx_u50_gen3x16_xdma_base_5-0,719.792,0.163508,1:1:1,1:1:1,
+140066936599360,vinc,0,5,xilinx_u50_gen3x16_xdma_base_5-0,778.614,0.115538,1:1:1,1:1:1,
+140066936842480,vinc,0,5,xilinx_u50_gen3x16_xdma_base_5-0,924.003,0.109759,1:1:1,1:1:1,
+140066936680816,vinc,0,5,xilinx_u50_gen3x16_xdma_base_5-0,1082.22,0.074034,1:1:1,1:1:1,
+140066937066096,vinc,0,5,xilinx_u50_gen3x16_xdma_base_5-0,1053.4,0.073527,1:1:1,1:1:1,
+140067205270368,vmul,0,4,xilinx_u50_gen3x16_xdma_base_5-0,778.359,0.070794,1:1:1,1:1:1,
+140066936650544,vinc,0,5,xilinx_u50_gen3x16_xdma_base_5-0,967.061,0.064659,1:1:1,1:1:1,
+140066936602448,vinc,0,5,xilinx_u50_gen3x16_xdma_base_5-0,851.266,0.062196,1:1:1,1:1:1,
+140067205270688,vmul,0,4,xilinx_u50_gen3x16_xdma_base_5-0,851.486,0.061147,1:1:1,1:1:1,
+
+Top Memory Writes: Host to Global Memory
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Writing Rate(MB/s),
+0,0,2,711.563,8.09925,0.064,0.00790196,
+0,0,0,711.57,7.96558,0.032,0.00401728,
+5368717312,0,4,851.242,0.228803,0.064,0.279717,
+12288,0,2,924.289,0.228033,0.064,0.280661,
+5368709120,0,4,719.562,0.214929,0.064,0.297773,
+1610616832,0,3,851.449,0.175796,0.064,0.364058,
+0,0,0,851.451,0.136345,0.032,0.234699,
+5368721408,0,4,924.048,0.135212,0.064,0.473331,
+0,0,0,719.64,0.125049,0.032,0.2559,
+1610620928,0,3,924.431,0.122883,0.064,0.520821,
+
+Top Memory Reads: Host to Global Memory
+Buffer Address,Context ID,Command Queue ID,Start Time (ms),Duration (ms),Buffer Size (KB),Reading Rate(MB/s),
+5905592320,0,4,924.405,0.079207,0.032,0.404005,
+4026540032,0,5,924.14,0.059351,0.032,0.539165,
+4026548224,0,5,996.049,0.055607,0.032,0.575467,
+5905580032,0,4,731.608,0.055248,0.032,0.579206,
+2147483648,0,3,778.798,0.051876,0.032,0.616856,
+5905584128,0,4,778.48,0.050472,0.032,0.634015,
+4026560512,0,5,1082.34,0.048341,0.032,0.661964,
+4026531840,0,5,778.777,0.045268,0.032,0.706901,
+4026552320,0,5,1024.72,0.04415,0.032,0.724802,
+2147491840,0,3,924.655,0.044034,0.032,0.726711,
+
+Data Transfer: Host to Global Memory
+Context:Number of Devices,Transfer Type,Number Of Buffer Transfers,Transfer Rate (MB/s),Average Bandwidth Utilization (%),Average Buffer Size (KB),Total Time (ms),Average Time (ms),
+context0:1,READ,40,0.947214,0.00601258,0.032,1.35133,0.0337833,
+context0:1,WRITE,52,0.106102,0.000673499,0.0393846,19.3022,0.371195,
+
+Compute Unit Utilization
+Device,Compute Unit,Kernel,Global Work Size,Local Work Size,Number Of Calls,Dataflow Execution,Max Overlapping Executions,Dataflow Acceleration,Total Time (ms),Minimum Time (ms),Average Time (ms),Maximum Time (ms),Clock Frequency (MHz),
+
+
+
+
+
+
+
+
+
+TITLE:Native API Calls
+SECTION:API Calls,Native API Calls
+COLUMN:<html>API Name</html>,string,Name of Native XRT API,
+COLUMN:<html>Number<br>Of Calls</html>,int,Number of calls to API,
+COLUMN:<html>Total<br>Time (ms)</html>,float,Total execution time (in ms),
+COLUMN:<html>Minimum<br>Time (ms)</html>,float,Minimum execution time (in ms),
+COLUMN:<html>Average<br>Time (ms)</html>,float,Average execution time (in ms),
+COLUMN:<html>Maximum<br>Time (ms)</html>,float,Maximum execution time (in ms),
+ENTRY:xrt::bo::address,326,0.609174,0.000305,0.00186863,0.071316,
+ENTRY:xrt::bo::bo,52,2.83855,0.012093,0.0545874,0.375868,
+ENTRY:xrt::bo::sync,52,9.70795,0.013376,0.186691,7.96491,
+ENTRY:xrt::device::device,2,40.51,17.7437,20.255,22.7663,
+ENTRY:xrt::device::load_xclbin,2,174.04,84.601,87.02,89.439,
+ENTRY:xrt::device::reset,1,0.818703,0.818703,0.818703,0.818703,
+ENTRY:xrt::kernel::kernel,20,1111.04,27.9863,55.5522,71.9257,
+ENTRY:xrt::run::run,20,0.713785,0.002848,0.0356892,0.068691,
+ENTRY:xrt::run::start,20,0.341399,0.00741,0.01707,0.066033,
+
+TITLE:Host Reads from Global Memory
+SECTION:Host Data Transfers,Host Reads from Global Memory
+COLUMN:<html>Number<br>of Reads</html>,int,Number of host reads (note: may contain OpenCL printf transfers),
+COLUMN:<html>Maximum<br>Buffer<br>Size (KB)</html>,float,Maximum buffer size of host reads,
+COLUMN:<html>Minimum<br>Buffer<br>Size (KB)</html>,float,Minimum buffer size of host reads,
+COLUMN:<html>Average<br>Buffer<br>Size (KB)</html>,float,Average buffer size of host reads: Average Size = (Total KB) / (Number of Transfers),
+COLUMN:<html>Transfer<br>Rate (MB/s)</html>,float,Rate of host reads (in MB/s): Transfer Rate = (Total Bytes) / (Total Time in us),
+COLUMN:<html>Average<br>Bandwidth<br>Utilization (%)</html>,float,Average bandwidth of host reads: Bandwidth Utilization (%) = (100 * Transfer Rate) / (Max. Theoretical Rate),
+COLUMN:<html>Maximum<br>Time (ms)</html>,float,Maximum time of a single host read,
+COLUMN:<html>Minimum<br>Time (ms)</html>,float,Minimum time of a single host read,
+COLUMN:<html>Total<br>Time (ms)</html>,float,Combined time of all host reads,
+COLUMN:<html>Average<br>Time (ms)</html>,float,Average of read durations (in ms),
+ENTRY:40,0.032,0.032,0.032,0.947214,0.00601258,0.079207,0.016273,1.35133,0.0337833,
+
+TITLE:Host Writes to Global Memory
+SECTION:Host Data Transfers,Host Writes to Global Memory
+COLUMN:<html>Number<br>of Writes</html>,int,Number of host writes,
+COLUMN:<html>Maximum<br>Buffer<br>Size (KB)</html>,float,Maximum buffer size of host writes,
+COLUMN:<html>Minimum<br>Buffer<br>Size (KB)</html>,float,Minimum buffer size of host writes,
+COLUMN:<html>Average<br>Buffer<br>Size (KB)</html>,float,Average buffer size of host writes: Average Size = (Total KB) / (Number of Transfers),
+COLUMN:<html>Transfer<br>Rate (MB/s)</html>,float,Rate of host writes (in MB/s): Transfer Rate = (Total Bytes) / (Total Time in us),
+COLUMN:<html>Average<br>Bandwidth<br>Utilization (%)</html>,float,Average bandwidth of host writes: Bandwidth Utilization (%) = (100 * Transfer Rate) / (Max. Theoretical Rate),
+COLUMN:<html>Maximum<br>Time (ms)</html>,float,Maximum time of a single host write,
+COLUMN:<html>Minimum<br>Time (ms)</html>,float,Minimum time of a single host write,
+COLUMN:<html>Total<br>Time (ms)</html>,float,Combined time of all host write,
+COLUMN:<html>Average<br>Time (ms)</html>,float,Average of write durations (in ms),
+ENTRY:52,0.064,0.032,0.0393846,0.106102,0.000673499,8.09925,0.01363,19.3022,0.371195,
+
+TITLE:Top Memory Reads: Host from Global Memory
+SECTION:Host Data Transfers,Top Memory Reads
+COLUMN:<html>Start<br>Time (ms)</html>,float,Start time of read transfer (in ms),
+COLUMN:<html>Buffer<br>Size (KB)</html>,float,Size of read transfer (in KB),
+COLUMN:<html>Duration (ms)</html>,float,Duration of read transfer (in ms),
+COLUMN:<html>Reading<br>Rate (MB/s)</html>,float,Transfer rate of reads: Reading Rate = (Buffer Size) / (Duration),
+ENTRY:924.405,0.032,0.079207,0.404005,
+ENTRY:924.14,0.032,0.059351,0.539165,
+ENTRY:996.049,0.032,0.055607,0.575467,
+ENTRY:731.608,0.032,0.055248,0.579206,
+ENTRY:778.798,0.032,0.051876,0.616856,
+ENTRY:778.48,0.032,0.050472,0.634015,
+ENTRY:1082.34,0.032,0.048341,0.661964,
+ENTRY:778.777,0.032,0.045268,0.706901,
+ENTRY:1024.72,0.032,0.04415,0.724802,
+ENTRY:924.655,0.032,0.044034,0.726711,
+
+TITLE:Top Memory Writes: Host to Global Memory
+SECTION:Host Data Transfers,Top Memory Writes
+COLUMN:<html>Start<br>Time (ms)</html>,float,Start time of write transfer (in ms),
+COLUMN:<html>Buffer<br>Size (KB)</html>,float,Size of write transfer (in KB),
+COLUMN:<html>Duration (ms)</html>,float,Duration of write transfer (in ms),
+COLUMN:<html>Writing<br>Rate (MB/s)</html>,float,Transfer rate of writes: Writing Rate = (Buffer Size) / (Duration),
+ENTRY:711.563,0.064,8.09925,0.00790196,
+ENTRY:711.57,0.032,7.96558,0.00401728,
+ENTRY:851.242,0.064,0.228803,0.279717,
+ENTRY:924.289,0.064,0.228033,0.280661,
+ENTRY:719.562,0.064,0.214929,0.297773,
+ENTRY:851.449,0.064,0.175796,0.364058,
+ENTRY:851.451,0.032,0.136345,0.234699,
+ENTRY:924.048,0.064,0.135212,0.473331,
+ENTRY:719.64,0.032,0.125049,0.2559,
+ENTRY:924.431,0.064,0.122883,0.520821,
+
+Guidance Parameters
+Parameter,Element,Value,
+DEVICE_EXEC_TIME,xilinx_u50_gen3x16_xdma_base_5-0,362.618,
+DEVICE_EXEC_TIME,xilinx_u50_gen3x16_xdma_base_5-1,0,
+NUM_MONITORS,xilinx_u50_gen3x16_xdma_base_5-0|XCL_PERF_MON_MEMORY|0,0,
+NUM_MONITORS,xilinx_u50_gen3x16_xdma_base_5-0|XCL_PERF_MON_ACCEL|0,0,
+NUM_MONITORS,xilinx_u50_gen3x16_xdma_base_5-0|XCL_PERF_MON_STR|0,0,
+NUM_MONITORS,xilinx_u50_gen3x16_xdma_base_5-1|XCL_PERF_MON_MEMORY|0,0,
+NUM_MONITORS,xilinx_u50_gen3x16_xdma_base_5-1|XCL_PERF_MON_ACCEL|0,0,
+NUM_MONITORS,xilinx_u50_gen3x16_xdma_base_5-1|XCL_PERF_MON_STR|0,0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[0],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[1],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[2],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[3],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[4],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[5],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[6],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[7],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[8],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[9],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[10],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[11],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[12],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[13],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[14],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[15],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[16],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[17],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[18],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[19],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[20],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[21],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[22],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[23],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[24],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[25],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[26],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[27],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[28],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[29],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[30],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HBM[31],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|PLRAM[0],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|PLRAM[1],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|PLRAM[2],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|PLRAM[3],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-0|HOST[0],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[0],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[1],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[2],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[3],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[4],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[5],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[6],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[7],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[8],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[9],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[10],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[11],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[12],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[13],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[14],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[15],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[16],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[17],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[18],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[19],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[20],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[21],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[22],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[23],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[24],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[25],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[26],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[27],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[28],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[29],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[30],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HBM[31],1,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|PLRAM[0],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|PLRAM[1],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|PLRAM[2],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|PLRAM[3],0,
+MEMORY_USAGE,xilinx_u50_gen3x16_xdma_base_5-1|HOST[0],0,
+PLRAM_DEVICE,all,1,
+HBM_DEVICE,all,1,
+KDMA_DEVICE,all,0,
+P2P_DEVICE,all,0,
+KERNEL_COUNT,vadd,8,
+KERNEL_COUNT,vinc,8,
+KERNEL_COUNT,vmul,8,
+TRACE_MEMORY,all,N/A,
+PLRAM_SIZE_BYTES,xilinx_u50_gen3x16_xdma_base_5-0,0,
+TRACE_BUFFER_FULL,xilinx_u50_gen3x16_xdma_base_5-0,false
+TRACE_BUFFER_FULL,xilinx_u50_gen3x16_xdma_base_5-1,false
+MEMORY_TYPE_BIT_WIDTH,xilinx_u50_gen3x16_xdma_base_5-0|HBM,256,
+MEMORY_TYPE_BIT_WIDTH,xilinx_u50_gen3x16_xdma_base_5-0|DDR,512,
+MEMORY_TYPE_BIT_WIDTH,xilinx_u50_gen3x16_xdma_base_5-0|PLRAM,512,
+MEMORY_TYPE_BIT_WIDTH,xilinx_u50_gen3x16_xdma_base_5-1|HBM,256,
+MEMORY_TYPE_BIT_WIDTH,xilinx_u50_gen3x16_xdma_base_5-1|DDR,512,
+MEMORY_TYPE_BIT_WIDTH,xilinx_u50_gen3x16_xdma_base_5-1|PLRAM,512,
+APPLICATION_RUN_TIME_MS,all,1365.9,
+MIGRATE_MEM,host,40,
+P2P_HOST_TRANSFERS,host,0,
+OBJECTS_RELEASED,all,2,
+CU_CONTEXT_EN,all,0,
+MAX_PARALLEL_KERNEL_ENQUEUES,vadd,1,
+MAX_PARALLEL_KERNEL_ENQUEUES,vinc,1,
+MAX_PARALLEL_KERNEL_ENQUEUES,vmul,1,
+COMMAND_QUEUE_OOO,94716630920688,0,
+COMMAND_QUEUE_OOO,94716631014000,0,
+COMMAND_QUEUE_OOO,94716631030160,0,
+COMMAND_QUEUE_OOO,94716631253008,0,
+KERNEL_BUFFER_INFO,vadd|in1|HBM[0]|1,32,
+KERNEL_BUFFER_INFO,vadd|in2|HBM[1]|1,32,
+KERNEL_BUFFER_INFO,vadd|out_r|HBM[2]|1,32,
+KERNEL_BUFFER_INFO,vinc|in_r|HBM[14]|1,32,
+KERNEL_BUFFER_INFO,vinc|out_r|HBM[15]|1,32,
+KERNEL_BUFFER_INFO,vmul|in1|HBM[20]|1,32,
+KERNEL_BUFFER_INFO,vmul|in2|HBM[21]|1,32,
+KERNEL_BUFFER_INFO,vmul|out_r|HBM[22]|1,32,
+BUFFER_RD_ACTIVE_TIME_MS,all,1.35133,
+BUFFER_WR_ACTIVE_TIME_MS,all,19.3022,
+BUFFER_TX_ACTIVE_TIME_MS,all,370.83,
+TOTAL_KERNEL_RUN_TIME_MS,all,0,
+XRT_INI_SETTING,opencl_trace,1,Generation of trace of OpenCL APIs and memory transfers
+XRT_INI_SETTING,device_counters,0,Hardware counters added to summary file
+XRT_INI_SETTING,host_trace,0,Enable the top level of host trace
+XRT_INI_SETTING,native_xrt_trace,1,Generation of Native XRT API function trace
+XRT_INI_SETTING,xrt_trace,0,Generation of hardware SHIM function trace
+XRT_INI_SETTING,device_trace,fine,Collection of data from PL monitors and added to summary and trace
+XRT_INI_SETTING,power_profile,0,Polling of power data during execution of application
+XRT_INI_SETTING,power_profile_interval_ms,20,Interval for reading power data (in ms)
+XRT_INI_SETTING,stall_trace,off,Enables hardware generation of stalls in compute units
+XRT_INI_SETTING,trace_buffer_size,1M,Size of buffer to allocate for trace (memory offload only)
+XRT_INI_SETTING,verbosity,4,Verbosity level
+XRT_INI_SETTING,continuous_trace,0,Continuous offloading of trace from memory to host
+XRT_INI_SETTING,trace_buffer_offload_interval_ms,10,Interval for reading of device data to host (in ms)
+XRT_INI_SETTING,trace_file_dump_interval_s,5,Interval for dumping files to host (in s)
+XRT_INI_SETTING,lop_trace,0,Generation of lower overhead OpenCL trace. Should not be used with other OpenCL options.
+XRT_INI_SETTING,debug_mode,batch,Debug mode (emulation only)
+XRT_INI_SETTING,aie_trace,0,Generation of AI Engine trace
+XRT_INI_SETTING,aie_profile,0,Generation of AI Engine profiling
+XRT_INI_SETTING,aie_status,0,Generation of AI Engine debug/status
+XRT_INI_SETTING,aie_status_interval_us,1000,Interval for reading AI Engine debug/status registers (in us)
+XRT_INI_SETTING,vitis_ai_profile,0,Generation of Vitis AI summary and trace (Vitis AI designs only)
+XRT_INI_SETTING,AIE_profile_settings.interval_us,1000,Interval for reading AI Engine profile counters (in us)
+XRT_INI_SETTING,AIE_profile_settings.graph_based_aie_metrics,,Metric set for profiling AI Engine processor modules per graph
+XRT_INI_SETTING,AIE_profile_settings.graph_based_aie_memory_metrics,,Metric set for profiling AI Engine memory modules per graph
+XRT_INI_SETTING,AIE_profile_settings.graph_based_memory_tile_metrics,,Metric set for profiling MEM tiles per graph
+XRT_INI_SETTING,AIE_profile_settings.tile_based_aie_metrics,,Metric set for profiling AI Engine processor modules per tile
+XRT_INI_SETTING,AIE_profile_settings.tile_based_aie_memory_metrics,,Metric set for profiling AI Engine memory modules per tile
+XRT_INI_SETTING,AIE_profile_settings.tile_based_memory_tile_metrics,,Metric set for profiling MEM tiles per tile
+XRT_INI_SETTING,AIE_profile_settings.tile_based_interface_tile_metrics,,Metric set for profiling AI Engine interface tiles per tile
+XRT_INI_SETTING,AIE_trace_settings.start_type,time,Type of delay to use in AI Engine trace
+XRT_INI_SETTING,AIE_trace_settings.start_time,0,Start delay for AI Engine trace
+XRT_INI_SETTING,AIE_trace_settings.start_iteration,1,Iteration count when graph type delay is used in AI Engine Trace
+XRT_INI_SETTING,AIE_trace_settings.graph_based_aie_tile_metrics,,Configuration level used for AI Engine trace per graph
+XRT_INI_SETTING,AIE_trace_settings.graph_based_memory_tile_metrics,,Configuration level used for MEM tile trace per graph
+XRT_INI_SETTING,AIE_trace_settings.tile_based_aie_tile_metrics,,Configuration level used for AI Engine trace per tile
+XRT_INI_SETTING,AIE_trace_settings.tile_based_memory_tile_metrics,,Configuration level used for MEM tile trace per tile
+XRT_INI_SETTING,AIE_trace_settings.buffer_size,8M,Size of buffer to allocate for AI Engine trace
+XRT_INI_SETTING,AIE_trace_settings.periodic_offload,1,Periodic offloading of AI Engine trace from memory to host
+XRT_INI_SETTING,AIE_trace_settings.reuse_buffer,0,Enable use of circular buffer for AI Engine trace
+XRT_INI_SETTING,AIE_trace_settings.buffer_offload_interval_us,100,Interval for reading of device AI Engine trace data to host (in us)
+XRT_INI_SETTING,AIE_trace_settings.file_dump_interval_s,5,Interval for dumping AI Engine trace files to host (in s)

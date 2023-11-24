@@ -1,0 +1,15 @@
+#-----------------------------------------------------------
+# Vitis Analyzer v2023.1 (64-bit)
+# SW Build 3865809 on Sun May  7 15:04:56 MDT 2023
+# 
+# 
+# Start of session at: Fri Nov 24 10:16:37 2023
+# Process ID: 1672171
+# Current directory: /home/rourab/Auto_FastFlow_fpga/tests/y_arm
+# Command line: vitis_analyzer xrt.run_summary
+# Log file: /home/rourab/Auto_FastFlow_fpga/tests/y_arm/vitis_analyzer.log
+# Journal file: /home/rourab/Auto_FastFlow_fpga/tests/y_arm/vitis_analyzer.jou
+# Running On: u50, OS: Linux, CPU Frequency: 1199.206 MHz, CPU Physical cores: 20, Host memory: 135057 MB
+#-----------------------------------------------------------
+start_gui
+create_project dummy

@@ -1,0 +1,6 @@
+"vadd","in",2,0    
+"vadd","out",1,0   
+"vinc","in",1,12    
+"vinc","out",1,12
+"vmul","in",2,20    
+"vmul","out",1,20   

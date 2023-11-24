@@ -1,0 +1,3 @@
+[submodule "auto_fastflow_fpga"]
+	path = auto_fastflow_fpga
+	url = https://github.com/rourabpaul1986/FastFlow.git

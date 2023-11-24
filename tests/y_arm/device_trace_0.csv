@@ -1,0 +1,125 @@
+HEADER
+VTF File Version,1.1
+VTF File Type,1
+PID,1611265
+Generated on,2023-11-23 16:02:44
+Resolution,ms
+Min Resolution,ns
+Trace Version,1.1
+TraceID,1611266
+XRT  Version,2.15.225
+Tool Version,2023.1
+Platform,xilinx_u50_gen3x16_xdma_base_5
+Target,System Run
+
+STRUCTURE
+Group_Start,xilinx_u50_gen3x16_xdma_base_5
+Group_Start,proc_flow.link.xclbin
+Group_Start,Compute Unit vadd_1 - No Trace,Activity in accelerator vadd:vadd_1
+Group_End,vadd_1
+Group_Start,Compute Unit vadd_2 - No Trace,Activity in accelerator vadd:vadd_2
+Group_End,vadd_2
+Group_Start,Compute Unit vadd_3 - No Trace,Activity in accelerator vadd:vadd_3
+Group_End,vadd_3
+Group_Start,Compute Unit vadd_4 - No Trace,Activity in accelerator vadd:vadd_4
+Group_End,vadd_4
+Group_Start,Compute Unit vinc_1 - No Trace,Activity in accelerator vinc:vinc_1
+Group_End,vinc_1
+Group_Start,Compute Unit vinc_2 - No Trace,Activity in accelerator vinc:vinc_2
+Group_End,vinc_2
+Group_Start,Compute Unit vinc_3 - No Trace,Activity in accelerator vinc:vinc_3
+Group_End,vinc_3
+Group_Start,Compute Unit vinc_4 - No Trace,Activity in accelerator vinc:vinc_4
+Group_End,vinc_4
+Group_Start,Compute Unit vmul_1 - No Trace,Activity in accelerator vmul:vmul_1
+Group_End,vmul_1
+Group_Start,Compute Unit vmul_2 - No Trace,Activity in accelerator vmul:vmul_2
+Group_End,vmul_2
+Group_Start,Compute Unit vmul_3 - No Trace,Activity in accelerator vmul:vmul_3
+Group_End,vmul_3
+Group_Start,Compute Unit vmul_4 - No Trace,Activity in accelerator vmul:vmul_4
+Group_End,vmul_4
+Group_End,proc_flow.link.xclbin
+Group_End,xilinx_u50_gen3x16_xdma_base_5
+
+MAPPING
+44,0:0:0
+61,140066802421600:8930802929887433984:0
+60,140066802504480:8930802929887433984:0
+58,140066802711040:8930802929887433984:0
+62,140066936607664:8930802929887433984:0
+59,140066936617024:8930802929887433984:0
+48,140067205274816:8930802929887433984:0
+52,140067372771448:140067760401552:0
+56,140067372771448:140067760401552:7
+57,140067767233952:48:0
+43,1:140067406342480:140067406342624
+40,1:140067532867920:140067532868064
+55,1:1:1
+33,HBM[0]
+49,HBM[14]
+53,HBM[15]
+36,HBM[20]
+47,HBM[22]
+45,HBM[2]
+50,HBM[6]
+54,HBM[8]
+46,READ
+35,WRITE
+21,clCreateBuffer
+11,clCreateCommandQueue
+7,clCreateContext
+18,clCreateKernel
+9,clCreateProgramWithBinary
+26,clEnqueueMigrateMemObjects
+28,clEnqueueTask
+4,clGetDeviceIDs
+1,clGetExtensionFunctionAddress
+2,clGetExtensionFunctionAddressForPlatform
+3,clGetPlatformInfo
+15,clReleaseCommandQueue
+16,clReleaseContext
+6,clReleaseDevice
+30,clReleaseEvent
+31,clReleaseKernel
+24,clReleaseMemObject
+17,clReleaseProgram
+14,clRetainCommandQueue
+13,clRetainContext
+5,clRetainDevice
+27,clRetainEvent
+23,clRetainMemObject
+12,clRetainProgram
+25,clSetKernelArg
+32,clWaitForEvents
+38,proc_flow.link
+39,vadd
+64,vadd_1
+65,vadd_2
+66,vadd_3
+67,vadd_4
+51,vinc
+68,vinc_1
+69,vinc_2
+70,vinc_3
+71,vinc_4
+42,vmul
+72,vmul_1
+73,vmul_2
+74,vmul_3
+75,vmul_4
+37,xilinx_u50_gen3x16_xdma_base_5
+29,xrt::bo::address
+22,xrt::bo::bo
+34,xrt::bo::sync
+8,xrt::device::device
+10,xrt::device::load_xclbin
+63,xrt::device::reset
+19,xrt::kernel::kernel
+20,xrt::run::run
+41,xrt::run::start
+
+EVENTS
+
+DEPENDENCIES
+
