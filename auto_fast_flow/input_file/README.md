@@ -1,6 +1,6 @@
-# proc_flow.csv
+# proc_flow1.csv
 
-The process flow example mentioned in /input_file/proc_flow.csv
+The process flow example mentioned in /input_file/proc_flow1.csv
 has 2 farms:
 
 ## FARM 01
