@@ -6,11 +6,11 @@ It offloads tasks to pre-compiled kernels on an Alveo FPGA
 ## Input Files
 The `auto_fast_flow` program is capable to execute farms and pipes of different process flows in multiple FPGAs. The Auto_FastFlow_fpga program take 2 input files
 ```
-#1. ./input_file/process_flow.csv
-#2. ./input_file/circuit.csv
+#1. ./auto_fast_flow/input_file/process_flow.csv
+#2. ./auto_fast_flow/input_file/circuit.csv
 ```
-process flows is described in ./input_file/process_flow.csv. 
-The available computation units are mentioned in ./input_file/circuit.csv.
+process flows is described in ./auto_fast_flow/input_file/process_flow.csv. 
+The available computation units are mentioned in ./auto_fast_flow/input_file/circuit.csv.
 
 
 -----------
@@ -20,9 +20,9 @@ The list of available circuits.
 The 1st column: name of the cus.
 The 2nd column: name of the ports.
 The 3rd column: numbe of ports.
-The 4th column: strating memory slot (HMB slot number in this case)
+The 4th column: strating memory slot (HBM slot number in this case)
 ### proc_flow.csv
-This project has 3 examples of proc_flow.csv :proc_flow1.csv, proc_flow2.csv and proc_flow3.csv 
+This project has 3 examples of proc_flow.csv :proc_flow1.csv, proc_flow2.csv and proc_flow3.csv in ./auto_fast_flow/input_file directory.
 #### proc_flow1.csv
 The content inside proc_flow1.csv is
 ```bash
