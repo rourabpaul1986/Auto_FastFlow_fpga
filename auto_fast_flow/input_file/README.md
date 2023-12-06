@@ -25,8 +25,8 @@ has 2 farms:
   (0)               (1)   
    |                 |
    |--vadd_2[FPGA1]--|
-   |
-   |--vadd_3[FPGA0]--(3)--vinc_1[FPGA0]--(4)--vmul_1[FPGA0]--(5)
+  
+   (2)--vadd_3[FPGA0]--(3)--vinc_1[FPGA0]--(4)--vmul_1[FPGA0]--(5)
 ```
 # proc_flow2.csv
 The process flow example mentioned in /input_file/proc_flow2.csv has 1 farms (FARM01) started form 0th node end ended in 1st node. This FRAM01 has 3 woorkers. The 1st workers has vadd_1, 2nd worker has vadd_2 and 3rd worker has 3 pipes with 3 karnels : vadd_3, vinc_1 and vmul_1.
@@ -36,4 +36,14 @@ The process flow example mentioned in /input_file/proc_flow2.csv has 1 farms (FA
   (0)---------------------vadd_2[FPGA1]-----------------------(1)   
    |                                                           |
    |--vadd_3[FPGA0]--(2)--vinc_1[FPGA0]--(3)--vmul_1[FPGA0]----|
+```
+
+# proc_flow3.csv
+The process flow example mentioned in /input_file/proc_flow2.csv has 1 farms (FARM01) started form 0th node end ended in 1st node. This FRAM01 has 3 woorkers. The 1st workers has vadd_1, 2nd worker has vadd_2 and 3rd worker has 3 pipes with 3 karnels : vadd_3, vinc_1 and vmul_1.
+```bash
+   (0)----------------------vadd_1[FPGA1]----------------------(1)
+                                                                
+   (2)-------vadd_2[FPGA0]-------(6)-------vadd_3[FPGA0]-------(3)----vinc_1[FPGA0]----(4)-----vinc_2[FPGA0]----(5)----vinc_3[FPGA0]---(7) 
+   |                                                            |
+   |----------------------vmul_1[FPGA0]-------------------------|
 ```
