@@ -1,3 +1,11 @@
+# circuit.csv
+
+The list of available circuits.
+The 1st column: name of the cus.
+The 2nd column: name of the ports.
+The 3rd column: numbe of ports.
+The 4th column: strating memory slot (HMB slot number in this case)
+
 # proc_flow1.csv
 
 The process flow example mentioned in /input_file/proc_flow1.csv
@@ -20,10 +28,12 @@ has 2 farms:
    |
    |--vadd_3[FPGA0]--(3)--vinc_1[FPGA0]--(4)--vmul_1[FPGA0]--(5)
 ```
-# circuit.csv
+# proc_flow2.csv
 
-The list of available circuits.
-The 1st column: name of the cus.
-The 2nd column: name of the ports.
-The 3rd column: numbe of ports.
-The 4th column: strating memory slot (HMB slot number in this case)
+```bash
+   |----------------------vadd_1[FPGA0]------------------------|
+   |                                                           |
+  (0)---------------------vadd_2[FPGA1]-----------------------(1)   
+   |                                                           |
+   |--vadd_3[FPGA0]--(2)--vinc_1[FPGA0]--(3)--vmul_1[FPGA0]----|
+```
