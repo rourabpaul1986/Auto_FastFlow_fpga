@@ -7,7 +7,13 @@ The 3rd column: numbe of ports.
 The 4th column: strating memory slot (HMB slot number in this case)
 
 # proc_flow1.csv
-
+The content inside proc_flow1.csv is
+```bash
+fpga, src, krnl, dst
+0, 0, vadd_1, 1
+1, 0, vadd_2, 1
+0, 2, vadd_3, 3, 0, 3, vinc_1, 4, 0, 4, vmul_1, 5
+```
 The process flow example mentioned in /input_file/proc_flow1.csv
 has 2 farms:
 
