@@ -55,9 +55,8 @@ The process flow example mentioned in /input_file/proc_flow2.csv has 1 farms (FA
 The content inside proc_flow3.csv is
 ```bash
 fpga, src, krnl, dst
-0, 0, vadd_1, 1
-1, 0, vadd_2, 1
-0, 0, vadd_3, 2, 0, 2, vinc_1, 3, 0, 3, vmul_1, 1
+1, 0, vadd_1, 1
+0, 2, vadd_2, 6, 0, 6, vadd_3, 3, 0, 2, vmul_1, 3, 0, 3, vinc_1, 4, 0, 4, vinc_2, 5, 0, 5, vinc_3, 7
 ```
 The process flow example mentioned in /input_file/proc_flow3.csv has 2 farms : FARM01 and FARM23. The FRAM23 has 2 woorkers. The 1st workers has 2 kernels in two consecutive pipse :vadd_1 and vadd_2. The 2nd worker has 1 kernel vmul_1. This two workers combinely connected with another worker which starting node is 3 and ending node is 7. This worker has 3 pipes with 3 karnels : vinc_1, vinc_2 and vinc_3.
 ```bash
