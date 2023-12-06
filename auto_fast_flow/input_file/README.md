@@ -13,12 +13,12 @@ has 2 farms:
 3. The vadd_3 and vinc_1 and vmul1 are implemented in in FPGA0 (mentioned in 1st column of line 4).
 ```bash
    |--vadd_1[FPGA0]--|
-   |          |
-  (0)        (1)   
-   |          |
-   |--vadd_2--|
+   |                 |
+  (0)               (1)   
+   |                 |
+   |--vadd_2[FPGA1]--|
    |
-   |--vadd_3--(3)--vinc_1--(4)--vmul_1--(5)
+   |--vadd_3[FPGA0]--(3)--vinc_1[FPGA0]--(4)--vmul_1[FPGA0]--(5)
 ```
 # circuit.csv
 
