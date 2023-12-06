@@ -21,7 +21,8 @@ The 1st column: name of the cus.
 The 2nd column: name of the ports.
 The 3rd column: numbe of ports.
 The 4th column: strating memory slot (HMB slot number in this case)
-
+### proc_flow.csv
+This project has 3 examples of proc_flow.csv :proc_flow1.csv, proc_flow2.csv and proc_flow3.csv 
 #### proc_flow1.csv
 The content inside proc_flow1.csv is
 ```bash
